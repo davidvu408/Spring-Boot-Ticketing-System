@@ -15,19 +15,34 @@
 <body>
 	<div class="container">
 		<%@ include file="Header.jsp"%>
-			<form method="post" action="/login" style="margin-top: 5%">
-				<div class="form-group text-center">
-					<label>User Name</label> <input type="text" name="username"
-						placeholder="John Doe" />
+		<div class="row">
+			<div class="col-sm-4 offset-4">
+				<div class="card bg-light mb-3" style="margin-top: 15%">
+					<div class="card-header">Log In</div>
+					<div class="card-body">
+						<form method="post" action="/login" class="text-center">
+						<%-- Spring Security will redirect to '/error' if wrong user name/password --%>
+						<c:if test="${param.error != null }">
+							<div class="bg-danger text-white">Incorrect user name or password.</div>
+						</c:if>
+							<div class="form-group">
+								<input type="hidden" name="${_csrf.parameterName}"
+									value="${_csrf.token}" />
+							</div>
+							<div class="form-group">
+								<input type="text" name="username" placeholder="User Name" />
+							</div>
+							<div class="form-group">
+								<input type="password" name="password" placeholder="Password" />
+							</div>
+							<div>
+								<button type="submit" class="btn btn-primary">Sign In</button>
+							</div>
+						</form>
+					</div>
 				</div>
-				<div class="form-group text-center">
-					<label>Password</label> <input type="password" name="password"
-						placeholder="ZZZZ" />
-				</div>
-				<div class="text-center">
-					<button type="submit" class="btn btn-primary">Sign In</button>
-				</div>
-			</form>
+			</div>
+		</div>
 	</div>
 
 </body>
