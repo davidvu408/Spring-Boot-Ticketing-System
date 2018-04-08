@@ -49,6 +49,17 @@ public class RequestMappingController {
 		return modelAndView;
 	}
 	
+	@ModelAttribute("marketingAreas")
+	public List<String> getMarketingArea() {
+		List<String> mAreas = new ArrayList<String>();
+		mAreas.add("WEB");
+		mAreas.add("GRAPHIC_DESIGN");
+		mAreas.add("MEDIA");
+		mAreas.add("EDITORIAL");
+		mAreas.add("DIGITAL_MARKETING");
+		return mAreas;
+	}
+	
 	@RequestMapping(value="delete-ticket", method = RequestMethod.GET) 
 	ModelAndView deleteTicket(ModelAndView modelAndView, @RequestParam(name="id") Long id) {
 		dao.deleteById(id);
