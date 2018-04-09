@@ -5,16 +5,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-	crossorigin="anonymous">
+	<%@ include file = "Header.jsp" %>
 <title>Login</title>
 </head>
 <body>
 	<div class="container">
-		<%@ include file="Header.jsp"%>
+		<%@ include file="NavBar.jsp"%>
 		<div class="row">
 			<div class="col-sm-4 offset-4">
 				<div class="card bg-light mb-3" style="margin-top: 15%">

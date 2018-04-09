@@ -4,15 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-	crossorigin="anonymous">
+	<%@ include file = "Header.jsp" %>
 <title>API Display</title>
 </head>
 <body>
-<%@ include file = "Header.jsp" %>
+<%@ include file = "NavBar.jsp" %>
 <div class="container">
 <code>
 ${apiList}
@@ -20,4 +16,5 @@ ${apiList}
 <p>Note: Will change this to JSON format soon.</p>
 </div>
 </body>
+
 </html>

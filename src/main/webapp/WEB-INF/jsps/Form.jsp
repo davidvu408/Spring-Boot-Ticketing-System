@@ -6,11 +6,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-	crossorigin="anonymous">
+	<%@ include file = "Header.jsp" %>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <title>Form</title>
 </head>
 
@@ -20,7 +17,7 @@ path="value": Value indicates path to property for data binding
 -->
 <body>
 	<div class="container">
-	<%@ include file = "Header.jsp" %>
+	<%@ include file = "NavBar.jsp" %>
 		<form:form modelAttribute="formResponse">
 			<div class="form-group">
 				<label for="requestorName">Requestor's Name</label> 

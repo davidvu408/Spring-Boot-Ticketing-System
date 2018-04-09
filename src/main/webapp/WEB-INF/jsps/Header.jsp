@@ -1,27 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-  
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-	<a class="navbar-brand" href="/">Ticketing System</a>
-	<div class="collapse navbar-collapse" id="navbarNav">
-		<ul class="navbar-nav">
-			<li class="nav-item"><a class="nav-link" href="/form">Form</a></li>
-				<li class="nav-item"><a class="nav-link" href="/view-tickets">View Tickets</a></li>
-			<li class="nav-item"><a class="nav-link" href="/api">API</a></li>
-			<sec:authorize access="isAuthenticated()">
-				<li class="nav-item"><a class="nav-link"
-				href="javascript: document.getElementById('logoutForm').submit();">Logout</a></li>
-			</sec:authorize>
-		</ul>
-	</div>
-</nav>
 
-<c:url var="logoutLink" value="/logout" />
-<form id="logoutForm" method="post" action="${logoutLink}">
-	<input type="hidden" name="${_csrf.parameterName}"
-		value="${_csrf.token}" />
-</form>
-
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
