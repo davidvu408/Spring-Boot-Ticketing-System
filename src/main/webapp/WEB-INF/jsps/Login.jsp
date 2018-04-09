@@ -26,10 +26,10 @@
 									value="${_csrf.token}" />
 							</div>
 							<div class="form-group">
-								<input type="text" name="username" placeholder="User Name" />
+								<input class="form-control" type="text" name="username" placeholder="User Name" />
 							</div>
 							<div class="form-group">
-								<input type="password" name="password" placeholder="Password" />
+								<input class="form-control" type="password" name="password" placeholder="Password" />
 							</div>
 							<div>
 								<button type="submit" class="btn btn-primary">Sign In</button>
